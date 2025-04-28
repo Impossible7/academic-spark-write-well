@@ -1,5 +1,5 @@
 
-import { Graduation, Award, CheckCircle, Clock } from "lucide-react";
+import { GraduationCap, Award, CheckCircle, Clock } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -16,7 +16,7 @@ const AboutSection = () => {
           {/* Icon Box 1 */}
           <div className="flex flex-col items-center text-center p-6 rounded-lg bg-white shadow-md hover:shadow-lg transition-all">
             <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-              <Graduation className="h-8 w-8 text-primary" strokeWidth={1.5} />
+              <GraduationCap className="h-8 w-8 text-primary" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Expert Writers</h3>
             <p className="text-text-dark/70">
