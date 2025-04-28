@@ -40,21 +40,30 @@ const services = [
   }
 ];
 
-const ServicesSection = () => {
+interface ServicesProps {
+  showAll?: boolean;
+}
+
+const ServicesSection = ({ showAll = false }: ServicesProps) => {
+  // If showAll is true, display all services; otherwise limit to the first 5
+  const displayedServices = showAll ? services : services;
+  
   return (
     <div className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Services</h2>
-          <p className="text-text-dark/80 text-lg">
-            We offer a comprehensive range of academic writing services tailored to meet the specific needs of law students, scholars, and professionals.
-          </p>
-        </div>
+        {!showAll && (
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Services</h2>
+            <p className="text-text-dark/80 text-lg">
+              We offer a comprehensive range of academic writing services tailored to meet the specific needs of law students, scholars, and professionals.
+            </p>
+          </div>
+        )}
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {displayedServices.map((service) => (
             <Link to={service.path} key={service.id} className="service-card group">
-              <div className="flex items-start">
+              <div className="flex items-start p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
                 </div>
@@ -67,9 +76,11 @@ const ServicesSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <Link to="/services" className="btn-outline inline-block">View All Services</Link>
-        </div>
+        {!showAll && (
+          <div className="text-center mt-12">
+            <Link to="/services" className="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-md transition-colors">View All Services</Link>
+          </div>
+        )}
       </div>
     </div>
   );
