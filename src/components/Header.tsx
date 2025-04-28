@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +25,21 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
   };
 
   return (
@@ -46,14 +56,23 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-text-dark hover:text-primary transition-colors">Home</Link>
-          <Link to="/about" className="text-text-dark hover:text-primary transition-colors">About</Link>
+          <Link 
+            to="/" 
+            className={`transition-colors ${isActive('/') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className={`transition-colors ${isActive('/about') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            About
+          </Link>
           
           {/* Services Dropdown */}
           <div className="relative group">
             <button 
-              className="text-text-dark hover:text-primary transition-colors flex items-center" 
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
+              className={`flex items-center transition-colors ${isActive('/services') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
             >
               Services <ChevronDown className="ml-1 h-4 w-4" />
             </button>
@@ -66,15 +85,37 @@ const Header = () => {
             </div>
           </div>
           
-          <Link to="/samples" className="text-text-dark hover:text-primary transition-colors">Samples</Link>
-          <Link to="/faq" className="text-text-dark hover:text-primary transition-colors">FAQs</Link>
-          <Link to="/blog" className="text-text-dark hover:text-primary transition-colors">Blog</Link>
-          <Link to="/contact" className="text-text-dark hover:text-primary transition-colors">Contact</Link>
+          <Link 
+            to="/samples" 
+            className={`transition-colors ${isActive('/samples') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            Samples
+          </Link>
+          <Link 
+            to="/faq" 
+            className={`transition-colors ${isActive('/faq') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            FAQs
+          </Link>
+          <Link 
+            to="/blog" 
+            className={`transition-colors ${isActive('/blog') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            Blog
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`transition-colors ${isActive('/contact') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button className="btn-primary">Get Started</Button>
+          <Button asChild>
+            <Link to="/contact">Get Started</Link>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -86,8 +127,8 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={`md:hidden bg-white ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="container mx-auto px-4 py-4 space-y-2">
-          <Link to="/" className="block py-2 text-text-dark hover:text-primary">Home</Link>
-          <Link to="/about" className="block py-2 text-text-dark hover:text-primary">About</Link>
+          <Link to="/" className={`block py-2 ${isActive('/') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Home</Link>
+          <Link to="/about" className={`block py-2 ${isActive('/about') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>About</Link>
           
           {/* Mobile Services Dropdown */}
           <div>
@@ -109,12 +150,14 @@ const Header = () => {
             )}
           </div>
           
-          <Link to="/samples" className="block py-2 text-text-dark hover:text-primary">Samples</Link>
-          <Link to="/faq" className="block py-2 text-text-dark hover:text-primary">FAQs</Link>
-          <Link to="/blog" className="block py-2 text-text-dark hover:text-primary">Blog</Link>
-          <Link to="/contact" className="block py-2 text-text-dark hover:text-primary">Contact</Link>
+          <Link to="/samples" className={`block py-2 ${isActive('/samples') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Samples</Link>
+          <Link to="/faq" className={`block py-2 ${isActive('/faq') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>FAQs</Link>
+          <Link to="/blog" className={`block py-2 ${isActive('/blog') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Blog</Link>
+          <Link to="/contact" className={`block py-2 ${isActive('/contact') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Contact</Link>
           
-          <Button className="btn-primary w-full mt-4">Get Started</Button>
+          <Button asChild className="w-full mt-4">
+            <Link to="/contact">Get Started</Link>
+          </Button>
         </div>
       </div>
     </header>
