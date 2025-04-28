@@ -116,6 +116,7 @@ const ServiceDetail = () => {
   const [service, setService] = useState<any>(null);
   
   useEffect(() => {
+    // Check if serviceId exists in servicesData
     if (serviceId && serviceId in servicesData) {
       setService(servicesData[serviceId as keyof typeof servicesData]);
     }
@@ -129,6 +130,9 @@ const ServiceDetail = () => {
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-4">Service Not Found</h2>
             <p>We couldn't find the service you're looking for.</p>
+            <Link to="/services" className="text-primary hover:text-primary/80 mt-4 inline-block">
+              View All Services
+            </Link>
           </div>
         </main>
         <Footer />

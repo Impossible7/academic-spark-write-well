@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { FileText, Book, Award, FileSearch, GraduationCap } from 'lucide-react';
 
@@ -44,8 +43,7 @@ interface ServicesProps {
   showAll?: boolean;
 }
 
-const ServicesSection = ({ showAll = false }: ServicesProps) => {
-  // If showAll is true, display all services; otherwise limit to the first 5
+const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
   const displayedServices = showAll ? services : services;
   
   return (
@@ -62,7 +60,11 @@ const ServicesSection = ({ showAll = false }: ServicesProps) => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedServices.map((service) => (
-            <Link to={service.path} key={service.id} className="service-card group">
+            <Link 
+              to={`/services/${service.id}`} 
+              key={service.id} 
+              className="service-card group"
+            >
               <div className="flex items-start p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
                 <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
@@ -78,7 +80,12 @@ const ServicesSection = ({ showAll = false }: ServicesProps) => {
         
         {!showAll && (
           <div className="text-center mt-12">
-            <Link to="/services" className="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-md transition-colors">View All Services</Link>
+            <Link 
+              to="/services" 
+              className="inline-block px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-white rounded-md transition-colors"
+            >
+              View All Services
+            </Link>
           </div>
         )}
       </div>
