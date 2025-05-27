@@ -26,16 +26,16 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#1D3557',
+					DEFAULT: '#92400e',
 					foreground: '#ffffff'
 				},
 				secondary: {
-					DEFAULT: '#00B4D8',
+					DEFAULT: '#d97706',
 					foreground: '#ffffff'
 				},
 				accent: {
-					DEFAULT: '#FFB703',
-					foreground: '#1D3557'
+					DEFAULT: '#fbbf24',
+					foreground: '#92400e'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -53,8 +53,8 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				"background-light": "#F8F9FA",
-				"text-dark": "#212529"
+				"background-light": "#fef7ed",
+				"text-dark": "#451a03"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -63,7 +63,10 @@ export default {
 			},
 			fontFamily: {
 				'sans': ['Open Sans', 'sans-serif'],
+				'serif': ['Crimson Text', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+				'crimson': ['Crimson Text', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {
