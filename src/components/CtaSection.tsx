@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Feather, Send, MessageCircle } from "lucide-react";
+import { PenTool, Send, MessageCircle, Sparkles, Heart, Star } from "lucide-react";
 
 const CtaSection = () => {
   const [formData, setFormData] = useState({
@@ -28,28 +28,28 @@ const CtaSection = () => {
     
     // Validate form
     if (!formData.name || !formData.email || !formData.phone || !formData.description) {
-      toast.error("Please fill in all fields");
+      toast.error("🎨 Please fill in all the colorful fields!");
       return;
     }
 
     // Format the WhatsApp message
-    const message = `🎓 New Quote Request from Academic Spark Website:
+    const message = `🎨 New Creative Quote Request from Academic Spark Website:
 
-📝 Name: ${formData.name}
+✨ Name: ${formData.name}
 📧 Email: ${formData.email}
 📱 Phone: ${formData.phone}
 
-📋 Project Description:
+🌈 Project Description:
 ${formData.description}
 
 ---
-Sent from Academic Spark Website`;
+✍️ Sent from Academic Spark Website`;
     
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/1234567890?text=${encodedMessage}`; // Replace with your WhatsApp number
     
     // Show success message
-    toast.success("Redirecting to WhatsApp...");
+    toast.success("🎉 Redirecting to WhatsApp magic...");
     
     // Reset form
     setFormData({
@@ -67,139 +67,150 @@ Sent from Academic Spark Website`;
   };
 
   return (
-    <div className="py-16 md:py-24 bg-gradient-to-br from-amber-900 via-orange-800 to-yellow-900 relative overflow-hidden">
-      {/* Background paper texture */}
-      <div className="absolute inset-0 paper-texture opacity-20"></div>
-      
-      {/* Floating elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="floating-paper absolute top-10 left-10 opacity-10">
-          <Feather className="h-16 w-16 text-amber-200" />
+    <div className="py-16 md:py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 relative overflow-hidden">
+      {/* Colorful background elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="floating-element absolute top-10 left-10">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full p-4">
+            <PenTool className="h-16 w-16 text-white" />
+          </div>
         </div>
-        <div className="floating-paper absolute bottom-10 right-10 opacity-10" style={{animationDelay: '3s'}}>
-          <MessageCircle className="h-20 w-20 text-amber-200" />
+        <div className="floating-element absolute bottom-10 right-10">
+          <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full p-5">
+            <MessageCircle className="h-20 w-20 text-white" />
+          </div>
+        </div>
+        <div className="floating-element absolute top-1/2 left-1/4">
+          <div className="bg-gradient-to-r from-pink-400 to-purple-500 rounded-full p-3">
+            <Heart className="h-12 w-12 text-white" />
+          </div>
+        </div>
+        <div className="floating-element absolute bottom-1/3 right-1/4">
+          <div className="bg-gradient-to-r from-blue-400 to-green-500 rounded-full p-4">
+            <Star className="h-14 w-14 text-white" />
+          </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center text-white border border-white/20 shadow-2xl">
+        <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center text-white border-2 border-white/30 shadow-2xl notebook-paper">
           <div className="flex justify-center mb-6">
-            <div className="bg-amber-200/20 rounded-full p-4">
-              <Feather className="h-12 w-12 text-amber-200" />
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full p-6 shadow-xl animate-colorful-bounce">
+              <Sparkles className="h-12 w-12 text-white" />
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-6">
-            Ready to Transform Your Ideas Into
-            <span className="bg-gradient-to-r from-amber-200 to-yellow-200 bg-clip-text text-transparent block">
-              Literary Masterpieces?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-handwriting-bold mb-6 handwriting-effect">
+            🎨 Ready to Paint Your Ideas Into
+            <span className="block text-yellow-200 font-creative mt-2">
+              ✨ Literary Masterpieces? 📝
             </span>
           </h2>
           
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8 font-crimson leading-relaxed">
-            Let our team of literary craftsmen help you achieve academic excellence. 
-            Every word carefully chosen, every sentence expertly crafted, every paper a work of art.
+          <p className="text-xl opacity-95 max-w-3xl mx-auto mb-8 font-notebook leading-relaxed">
+            🌈 Let our rainbow team of creative wizards transform your thoughts into colorful, 
+            engaging stories that dance off the page! Every word is a brushstroke of brilliance! 🎭✨
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
               <DialogTrigger asChild>
-                <Button className="btn-accent text-lg px-8 py-4 relative group">
-                  <Feather className="h-5 w-5 mr-2 group-hover:animate-pulse" />
-                  Start Your Literary Journey
+                <Button className="btn-accent text-lg px-8 py-4 relative group font-handwriting-bold rounded-full shadow-xl">
+                  <PenTool className="h-5 w-5 mr-2 group-hover:animate-spin" />
+                  🎨 Start Your Creative Journey
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[500px] bg-amber-50 border-amber-200">
+              <DialogContent className="sm:max-w-[500px] bg-gradient-to-br from-yellow-50 to-pink-50 border-2 border-purple-200 rounded-3xl">
                 <DialogHeader>
                   <div className="flex items-center justify-center mb-4">
-                    <div className="bg-amber-600/10 rounded-full p-3">
-                      <Feather className="h-8 w-8 text-amber-700" />
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full p-4 shadow-lg animate-colorful-bounce">
+                      <PenTool className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  <DialogTitle className="text-2xl font-playfair font-bold text-amber-900 text-center">
-                    Begin Your Project
+                  <DialogTitle className="text-2xl font-handwriting-bold text-purple-800 text-center handwriting-effect">
+                    ✨ Let's Create Magic Together! 🎨
                   </DialogTitle>
-                  <p className="text-amber-700/80 text-center font-crimson">
-                    Share your vision with us and let's craft something extraordinary together
+                  <p className="text-purple-600 text-center font-notebook">
+                    Share your colorful vision and let's paint something extraordinary! 🌈
                   </p>
                 </DialogHeader>
                 
                 <form onSubmit={handleSubmit} className="space-y-6 mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-amber-800 mb-2">
-                        Your Name
+                      <label htmlFor="name" className="block text-sm font-handwriting-bold text-purple-700 mb-2">
+                        ✍️ Your Name
                       </label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="bg-white border-amber-200 focus:border-amber-500"
-                        placeholder="Enter your full name"
+                        className="bg-white/80 border-2 border-purple-300 focus:border-pink-400 rounded-xl font-notebook"
+                        placeholder="Your magical name..."
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-amber-800 mb-2">
-                        Phone Number
+                      <label htmlFor="phone" className="block text-sm font-handwriting-bold text-purple-700 mb-2">
+                        📱 Phone Number
                       </label>
                       <Input
                         id="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="bg-white border-amber-200 focus:border-amber-500"
-                        placeholder="Your phone number"
+                        className="bg-white/80 border-2 border-purple-300 focus:border-pink-400 rounded-xl font-notebook"
+                        placeholder="Your contact magic..."
                         required
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-amber-800 mb-2">
-                      Email Address
+                    <label htmlFor="email" className="block text-sm font-handwriting-bold text-purple-700 mb-2">
+                      📧 Email Address
                     </label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-white border-amber-200 focus:border-amber-500"
-                      placeholder="your.email@example.com"
+                      className="bg-white/80 border-2 border-purple-300 focus:border-pink-400 rounded-xl font-notebook"
+                      placeholder="your.email@magic.com"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="description" className="block text-sm font-medium text-amber-800 mb-2">
-                      Project Description
+                    <label htmlFor="description" className="block text-sm font-handwriting-bold text-purple-700 mb-2">
+                      🎨 Project Description
                     </label>
                     <Textarea
                       id="description"
                       rows={4}
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                      className="bg-white border-amber-200 focus:border-amber-500 resize-none"
-                      placeholder="Tell us about your project... What type of writing do you need? What's the deadline? Any specific requirements?"
+                      className="bg-white/80 border-2 border-purple-300 focus:border-pink-400 rounded-xl resize-none font-notebook"
+                      placeholder="Tell us about your creative vision... What magical writing do you need? When's your deadline? Any special sparkles you want? ✨"
                       required
                     />
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-amber-700 hover:bg-amber-600 text-white py-3 text-lg font-medium"
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-red-500 text-white py-4 text-lg font-handwriting-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                   >
                     <Send className="h-5 w-5 mr-2" />
-                    Send to WhatsApp
+                    🚀 Send to WhatsApp Magic
                   </Button>
                 </form>
               </DialogContent>
             </Dialog>
             
             <Link to="/contact">
-              <Button variant="outline" className="border-2 border-amber-200 text-amber-100 hover:bg-amber-200/10 text-lg px-8 py-4">
+              <Button variant="outline" className="border-3 border-white text-white hover:bg-white/10 text-lg px-8 py-4 font-handwriting-bold rounded-full shadow-lg">
                 <MessageCircle className="h-5 w-5 mr-2" />
-                Contact Our Writers
+                💬 Chat with Our Writers
               </Button>
             </Link>
           </div>

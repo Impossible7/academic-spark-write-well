@@ -1,42 +1,47 @@
 
 import { Link } from 'react-router-dom';
-import { FileText, Book, Award, FileSearch, GraduationCap, Feather } from 'lucide-react';
+import { FileText, Book, Award, FileSearch, GraduationCap, PenTool, Palette, Sparkles } from 'lucide-react';
 
 const services = [
   {
     id: 'research-paper',
-    title: 'Research Paper Writing',
-    description: 'Professionally crafted research papers tailored to your requirements with thorough research and citations.',
+    title: '📄 Research Papers',
+    description: 'Beautifully crafted research papers that sparkle with originality and academic excellence! ✨',
     icon: FileText,
-    path: '/services/research-paper'
+    path: '/services/research-paper',
+    gradient: 'from-blue-400 to-purple-600'
   },
   {
     id: 'dissertation',
-    title: 'Dissertation Writing',
-    description: 'Comprehensive support for dissertation projects at all academic levels, from proposal to final submission.',
+    title: '📚 Dissertations',
+    description: 'Comprehensive dissertation support that turns your ideas into academic masterpieces! 🎨',
     icon: Book,
-    path: '/services/dissertation'
+    path: '/services/dissertation',
+    gradient: 'from-purple-400 to-pink-600'
   },
   {
     id: 'moot-memorial',
-    title: 'Moot Memorial Preparation',
-    description: 'Expert assistance in crafting compelling moot court memorials with comprehensive legal research.',
+    title: '🏆 Moot Memorials',
+    description: 'Winning moot court memorials crafted with legal precision and creative flair! ⚖️',
     icon: Award,
-    path: '/services/moot-memorial'
+    path: '/services/moot-memorial',
+    gradient: 'from-pink-400 to-red-600'
   },
   {
     id: 'internship-report',
-    title: 'Internship Report Writing',
-    description: 'Professional guidance for structuring and writing impressive internship reports that stand out.',
+    title: '📋 Internship Reports',
+    description: 'Professional reports that showcase your journey and achievements in vibrant detail! 🌟',
     icon: FileSearch,
-    path: '/services/internship-report'
+    path: '/services/internship-report',
+    gradient: 'from-green-400 to-blue-600'
   },
   {
     id: 'phd-thesis',
-    title: 'PhD Thesis Support',
-    description: 'Comprehensive assistance for PhD candidates at every stage of the thesis writing process.',
+    title: '🎓 PhD Thesis',
+    description: 'Doctoral thesis support that transforms complex research into compelling narratives! 🔬',
     icon: GraduationCap,
-    path: '/services/phd-thesis'
+    path: '/services/phd-thesis',
+    gradient: 'from-orange-400 to-yellow-600'
   }
 ];
 
@@ -48,14 +53,23 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
   const displayedServices = showAll ? services : services;
   
   return (
-    <div className="py-16 md:py-24 bg-amber-50 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 opacity-5">
+    <div className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 relative overflow-hidden">
+      {/* Background colorful elements */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 rotate-12">
-          <Feather className="h-32 w-32 text-amber-600" />
+          <div className="bg-gradient-to-r from-blue-400 to-purple-500 rounded-full p-8">
+            <PenTool className="h-32 w-32 text-white" />
+          </div>
         </div>
         <div className="absolute bottom-10 right-10 -rotate-12">
-          <Book className="h-40 w-40 text-amber-600" />
+          <div className="bg-gradient-to-r from-pink-400 to-red-500 rounded-full p-10">
+            <Book className="h-40 w-40 text-white" />
+          </div>
+        </div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full p-6">
+            <Palette className="h-24 w-24 text-white opacity-50" />
+          </div>
         </div>
       </div>
 
@@ -63,17 +77,19 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
         {!showAll && (
           <div className="text-center max-w-4xl mx-auto mb-16">
             <div className="flex justify-center mb-6">
-              <div className="bg-amber-600/10 rounded-full p-4">
-                <Feather className="h-12 w-12 text-amber-800" />
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-6 shadow-xl animate-colorful-bounce">
+                <Sparkles className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
-              Our Literary Services
+            <h2 className="text-4xl md:text-5xl font-handwriting-bold mb-6 handwriting-effect">
+              <span className="colorful-text">
+                ✨ Our Magical Writing Services 🎨
+              </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-amber-800/80 text-lg font-crimson leading-relaxed">
-              We offer a comprehensive range of academic writing services tailored to meet the specific needs 
-              of law students, scholars, and professionals who seek excellence in every word.
+            <div className="w-32 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-gray-700 text-lg font-notebook leading-relaxed">
+              🌈 We offer a rainbow of creative writing services designed to bring your academic dreams to life! 
+              Every project is a canvas waiting for our colorful touch! 🎭
             </p>
           </div>
         )}
@@ -83,35 +99,35 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
             <Link 
               to={`/services/${service.id}`} 
               key={service.id} 
-              className="service-card group block"
-              style={{animationDelay: `${index * 0.1}s`}}
+              className="service-card group block transform hover:rotate-1 transition-all duration-500"
+              style={{animationDelay: `${index * 0.2}s`}}
             >
-              <div className="relative overflow-hidden">
-                {/* Book spine effect */}
-                <div className="absolute left-0 top-0 bottom-0 w-2 book-spine"></div>
+              <div className="relative overflow-hidden h-full">
+                {/* Colorful border effect */}
+                <div className={`absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-b ${service.gradient} rounded-l-3xl`}></div>
                 
-                <div className="flex items-start p-8 pl-10">
-                  <div className="h-16 w-16 bg-gradient-to-br from-amber-600 to-orange-500 rounded-lg flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <service.icon className="h-8 w-8 text-white" strokeWidth={1.5} />
+                <div className="flex flex-col items-center p-8 pl-12 h-full text-center">
+                  <div className={`h-20 w-20 bg-gradient-to-br ${service.gradient} rounded-full flex items-center justify-center mb-6 group-hover:scale-125 transition-transform duration-500 shadow-xl animate-colorful-bounce`}>
+                    <service.icon className="h-10 w-10 text-white" strokeWidth={2} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-playfair font-semibold mb-3 text-amber-900 group-hover:text-amber-700 transition-colors">
+                    <h3 className="text-xl font-handwriting-bold mb-4 text-gray-800 group-hover:text-purple-600 transition-colors handwriting-effect">
                       {service.title}
                     </h3>
-                    <p className="text-amber-800/70 font-crimson leading-relaxed text-sm">
+                    <p className="text-gray-600 font-notebook leading-relaxed text-sm mb-6">
                       {service.description}
                     </p>
                     
-                    {/* Decorative quill */}
-                    <div className="flex items-center mt-4 text-amber-600 group-hover:text-amber-500 transition-colors">
-                      <Feather className="h-4 w-4 mr-2" />
-                      <span className="text-sm font-medium">Learn More</span>
+                    {/* Decorative pen with colorful trail */}
+                    <div className="flex items-center justify-center mt-auto text-purple-600 group-hover:text-pink-500 transition-colors">
+                      <PenTool className="h-4 w-4 mr-2 animate-pulse" />
+                      <span className="text-sm font-handwriting-bold">✨ Create Magic</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-100/0 via-amber-100/20 to-amber-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Colorful hover effect overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-3xl`}></div>
               </div>
             </Link>
           ))}
@@ -121,10 +137,10 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
           <div className="text-center mt-16">
             <Link 
               to="/services" 
-              className="inline-flex items-center px-8 py-4 border-2 border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-white rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-pink-500 hover:to-red-500 rounded-full transition-all duration-300 font-handwriting-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-110"
             >
-              <Book className="h-5 w-5 mr-2" />
-              Explore All Services
+              <Book className="h-6 w-6 mr-3" />
+              🎨 Explore All Our Magic
             </Link>
           </div>
         )}
