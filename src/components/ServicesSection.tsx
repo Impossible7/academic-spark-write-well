@@ -5,15 +5,15 @@ import { FileText, Book, Award, FileSearch, GraduationCap, PenTool, Palette, Spa
 const services = [
   {
     id: 'research-paper',
-    title: '📄 Research Papers',
+    title: 'Research Papers',
     description: 'Meticulously researched and professionally written papers that meet the highest academic standards.',
     icon: FileText,
     path: '/services/research-paper',
-    gradient: 'from-blue-500 to-indigo-600'
+    gradient: 'from-blue-600 to-blue-700'
   },
   {
     id: 'dissertation',
-    title: '📚 Dissertations',
+    title: 'Dissertations',
     description: 'Comprehensive dissertation support with expert guidance through every phase of your research.',
     icon: Book,
     path: '/services/dissertation',
@@ -21,23 +21,23 @@ const services = [
   },
   {
     id: 'moot-memorial',
-    title: '🏆 Moot Memorials',
+    title: 'Moot Memorials',
     description: 'Expertly crafted legal memorials with thorough research and compelling legal arguments.',
     icon: Award,
     path: '/services/moot-memorial',
-    gradient: 'from-indigo-500 to-blue-600'
+    gradient: 'from-blue-700 to-slate-700'
   },
   {
     id: 'internship-report',
-    title: '📋 Internship Reports',
+    title: 'Internship Reports',
     description: 'Professional reports that effectively showcase your internship experience and learning outcomes.',
     icon: FileSearch,
     path: '/services/internship-report',
-    gradient: 'from-amber-500 to-orange-500'
+    gradient: 'from-amber-600 to-amber-700'
   },
   {
     id: 'phd-thesis',
-    title: '🎓 PhD Thesis',
+    title: 'PhD Thesis',
     description: 'Advanced thesis support for doctoral candidates with comprehensive research methodology.',
     icon: GraduationCap,
     path: '/services/phd-thesis',
@@ -57,7 +57,7 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
       {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 rotate-12">
-          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full p-8">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-full p-8">
             <PenTool className="h-32 w-32 text-white" />
           </div>
         </div>
@@ -67,7 +67,7 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
           </div>
         </div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-full p-6">
+          <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-full p-6">
             <Palette className="h-24 w-24 text-white opacity-30" />
           </div>
         </div>
@@ -77,18 +77,18 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
         {!showAll && (
           <div className="text-center max-w-4xl mx-auto mb-16">
             <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-6 shadow-xl animate-gentle-bounce">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-6 shadow-xl animate-gentle-bounce">
                 <Sparkles className="h-12 w-12 text-white" />
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-handwriting-bold mb-6 handwriting-effect">
+            <h2 className="text-4xl md:text-5xl font-serif mb-6 handwriting-effect text-slate-800">
               <span className="professional-text">
-                ✨ Our Professional Writing Services
+                Our Professional Writing Services
               </span>
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-indigo-600 to-slate-600 mx-auto mb-6 rounded-full"></div>
-            <p className="text-slate-700 text-lg font-notebook leading-relaxed max-w-3xl mx-auto">
-              🌟 We offer comprehensive academic writing services with a focus on quality, precision, and timely delivery. 
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-600 via-slate-600 to-amber-600 mx-auto mb-6 rounded-full"></div>
+            <p className="text-slate-700 text-lg font-sans leading-relaxed max-w-3xl mx-auto">
+              We offer comprehensive academic writing services with a focus on quality, precision, and timely delivery. 
               Every project is handled with the utmost professionalism and attention to detail.
             </p>
           </div>
@@ -111,17 +111,17 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
                     <service.icon className="h-8 w-8 text-white" strokeWidth={2} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-handwriting-bold mb-4 text-slate-800 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-serif-bold mb-4 text-slate-800 group-hover:text-blue-700 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-slate-600 font-notebook leading-relaxed text-sm mb-6">
+                    <p className="text-slate-600 font-sans leading-relaxed text-sm mb-6">
                       {service.description}
                     </p>
                     
                     {/* Professional call-to-action */}
-                    <div className="flex items-center justify-center mt-auto text-blue-600 group-hover:text-indigo-600 transition-colors">
+                    <div className="flex items-center justify-center mt-auto text-blue-700 group-hover:text-blue-800 transition-colors">
                       <PenTool className="h-4 w-4 mr-2" />
-                      <span className="text-sm font-semibold">Learn More</span>
+                      <span className="text-sm font-semibold font-sans">Learn More</span>
                     </div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ const ServicesSection = ({ showAll = false }: { showAll?: boolean }) => {
           <div className="text-center mt-16">
             <Link 
               to="/services" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-indigo-600 hover:to-blue-700 rounded-lg transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 rounded-lg transition-all duration-300 font-semibold font-sans shadow-md hover:shadow-lg transform hover:scale-105"
             >
               <Book className="h-5 w-5 mr-3" />
               View All Services

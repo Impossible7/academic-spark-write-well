@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Floating professional elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="floating-element absolute top-20 left-10 opacity-20">
-          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full p-4 shadow-lg">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-full p-4 shadow-lg">
             <PenTool className="h-12 w-12 text-white" />
           </div>
         </div>
@@ -19,12 +19,12 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="floating-element absolute bottom-32 left-1/4 opacity-20">
-          <div className="bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full p-4 shadow-lg">
+          <div className="bg-gradient-to-r from-blue-700 to-slate-700 rounded-full p-4 shadow-lg">
             <Edit3 className="h-10 w-10 text-white" />
           </div>
         </div>
         <div className="floating-element absolute top-1/2 right-10 opacity-10">
-          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-full p-6 shadow-lg">
+          <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-full p-6 shadow-lg">
             <Feather className="h-20 w-20 text-white" />
           </div>
         </div>
@@ -41,55 +41,55 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-handwriting-bold text-white mb-6 handwriting-animation">
-              <span className="professional-text handwriting-effect">
-                ✨ Professional Writing Services
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 handwriting-animation">
+              <span className="professional-text handwriting-effect text-white">
+                Professional Academic Writing Services
               </span>
               <br />
-              <span className="text-slate-100 font-creative">
-                Crafted with Excellence & Precision 📝
+              <span className="text-slate-100 font-academic text-2xl md:text-3xl">
+                Excellence in Research & Scholarly Communication
               </span>
             </h1>
           </div>
           
-          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-3xl mx-auto font-notebook leading-relaxed">
-            🌟 Where academic excellence meets professional standards. We deliver high-quality writing services 
-            with attention to detail and scholarly precision. ✨
+          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-3xl mx-auto font-sans leading-relaxed">
+            Where academic excellence meets professional standards. We deliver high-quality writing services 
+            with meticulous attention to detail and scholarly precision for your success.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
-            <Button className="btn-accent text-lg px-8 py-4 relative group font-handwriting-bold">
+            <Button className="btn-accent text-lg px-8 py-4 relative group font-sans font-semibold">
               <PenTool className="h-5 w-5 mr-2 group-hover:animate-pulse" />
-              🎯 Start Your Project
+              Start Your Project
             </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 font-handwriting-bold rounded-lg">
+            <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 font-sans font-semibold rounded-lg">
               <BookOpen className="h-5 w-5 mr-2" />
-              📚 Explore Our Services
+              Explore Our Services
             </Button>
           </div>
 
           {/* Professional stats with refined styling */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce">
                 <FileText className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-handwriting-bold text-slate-100 mb-1">5000+ 📄</div>
-              <div className="text-white/80 text-sm font-notebook">Papers Delivered</div>
+              <div className="text-3xl font-serif-bold text-white mb-1">5,000+</div>
+              <div className="text-white/80 text-sm font-sans">Papers Delivered</div>
             </div>
             <div className="text-center transform hover:scale-105 transition-all duration-300">
               <div className="bg-gradient-to-r from-slate-600 to-slate-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce" style={{animationDelay: '1s'}}>
                 <PenTool className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-handwriting-bold text-slate-100 mb-1">250+ ✍️</div>
-              <div className="text-white/80 text-sm font-notebook">Expert Writers</div>
+              <div className="text-3xl font-serif-bold text-white mb-1">250+</div>
+              <div className="text-white/80 text-sm font-sans">Expert Writers</div>
             </div>
             <div className="text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce" style={{animationDelay: '2s'}}>
+              <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce" style={{animationDelay: '2s'}}>
                 <BookOpen className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-handwriting-bold text-slate-100 mb-1">10+ 🏆</div>
-              <div className="text-white/80 text-sm font-notebook">Years Excellence</div>
+              <div className="text-3xl font-serif-bold text-white mb-1">10+</div>
+              <div className="text-white/80 text-sm font-sans">Years Excellence</div>
             </div>
           </div>
         </div>

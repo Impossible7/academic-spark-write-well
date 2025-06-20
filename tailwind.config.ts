@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,15 +25,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#3b82f6',
+					DEFAULT: '#1e40af',
 					foreground: '#ffffff'
 				},
 				secondary: {
-					DEFAULT: '#8b5cf6',
+					DEFAULT: '#64748b',
 					foreground: '#ffffff'
 				},
 				accent: {
-					DEFAULT: '#ec4899',
+					DEFAULT: '#d97706',
 					foreground: '#ffffff'
 				},
 				destructive: {
@@ -53,12 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				"notebook": "#fef7ed",
+				"notebook": "#fefbf3",
 				"ink-blue": "#1e40af",
-				"ink-purple": "#7c3aed",
-				"ink-pink": "#db2777",
-				"ink-green": "#059669",
-				"ink-orange": "#ea580c"
+				"ink-slate": "#334155",
+				"ink-amber": "#d97706"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -66,11 +63,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'handwriting': ['Caveat', 'cursive'],
-				'handwriting-bold': ['Kalam', 'cursive'],
-				'notebook': ['Handlee', 'cursive'],
-				'creative': ['Architects Daughter', 'cursive'],
-				'casual': ['Indie Flower', 'cursive'],
+				'serif': ['Playfair Display', 'serif'],
+				'serif-bold': ['Source Serif Pro', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+				'academic': ['Crimson Text', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {

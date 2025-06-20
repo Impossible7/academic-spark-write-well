@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Handlee&family=Architects+Daughter&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -45,7 +44,7 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-800 font-handwriting;
+    @apply bg-slate-50 text-slate-900 font-serif;
     background-image: 
       linear-gradient(90deg, #f1f5f9 1px, transparent 1px),
       linear-gradient(#f1f5f9 1px, transparent 1px),
@@ -56,7 +55,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-handwriting-bold;
+    @apply font-serif-bold text-slate-800;
   }
 }
 
@@ -110,8 +109,8 @@
 }
 
 @keyframes subtle-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.1); }
-  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
+  0%, 100% { box-shadow: 0 0 20px rgba(30, 64, 175, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(30, 64, 175, 0.2); }
 }
 
 @layer components {
@@ -127,14 +126,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.15), transparent);
     animation: handwriting 3s ease-in-out forwards;
   }
 
   .service-card {
     @apply bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl hover:-translate-y-2;
     background-image: 
-      linear-gradient(45deg, transparent 40%, rgba(59, 130, 246, 0.02) 50%, transparent 60%),
+      linear-gradient(45deg, transparent 40%, rgba(30, 64, 175, 0.02) 50%, transparent 60%),
       repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(148, 163, 184, 0.15) 25px);
     animation: paperSlide 0.8s ease-out;
     border: 1px solid rgba(148, 163, 184, 0.2);
@@ -142,21 +141,21 @@
 
   .service-card:hover {
     background-image: 
-      linear-gradient(45deg, rgba(59, 130, 246, 0.05), rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05)),
+      linear-gradient(45deg, rgba(30, 64, 175, 0.05), rgba(51, 65, 85, 0.05), rgba(194, 165, 122, 0.05)),
       repeating-linear-gradient(0deg, transparent, transparent 24px, rgba(148, 163, 184, 0.2) 25px);
     animation: subtle-glow 2s ease-in-out infinite;
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900;
+    @apply bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900;
     background-image: 
-      linear-gradient(45deg, #1e293b, #1e40af, #3730a3),
+      linear-gradient(45deg, #1e293b, #1e40af, #334155),
       url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     animation: float 15s ease-in-out infinite;
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105;
+    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105;
     background-image: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
   }
 
@@ -165,7 +164,7 @@
   }
 
   .btn-accent {
-    @apply bg-gradient-to-r from-amber-500 to-orange-500 hover:from-orange-500 hover:to-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
+    @apply bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
     position: relative;
     overflow: hidden;
     animation: gentle-bounce 4s ease-in-out infinite;
@@ -187,7 +186,7 @@
   }
 
   .btn-outline {
-    @apply border-2 border-blue-500 hover:bg-blue-500 text-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    @apply border-2 border-blue-600 hover:bg-blue-600 text-blue-700 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .paper-texture {
@@ -199,8 +198,8 @@
   .notebook-paper {
     background-image: 
       repeating-linear-gradient(0deg, transparent, transparent 24px, #e2e8f0 25px),
-      linear-gradient(90deg, #ef4444 40px, transparent 40px),
-      linear-gradient(90deg, #3b82f6 80px, transparent 80px);
+      linear-gradient(90deg, #dc2626 40px, transparent 40px),
+      linear-gradient(90deg, #1e40af 80px, transparent 80px);
     background-size: 100% 25px, 100% 100%, 100% 100%;
   }
 
@@ -214,7 +213,7 @@
   }
 
   .professional-text {
-    background: linear-gradient(45deg, #1e40af, #3730a3, #1e3a8a, #1d4ed8);
+    background: linear-gradient(45deg, #1e40af, #334155, #1e3a8a, #475569);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -249,7 +248,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #1e40af, #1e3a8a);
+    background: linear-gradient(90deg, #1e40af, #334155, #1e3a8a);
     border-radius: 1px;
     animation: pen-draw 2s ease-in-out forwards;
   }
