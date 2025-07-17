@@ -42,19 +42,19 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 handwriting-animation">
-              <span className="professional-text handwriting-effect text-white">
+              <span className="text-white font-bold handwriting-effect">
                 Professional Academic Writing Services
               </span>
               <br />
-              <span className="text-slate-100 font-academic text-2xl md:text-3xl">
-                Excellence in Research & Scholarly Communication
+              <span className="text-slate-100 font-serif text-2xl md:text-3xl">
+                Excellence Across All Academic Disciplines
               </span>
             </h1>
           </div>
           
           <p className="text-white/90 text-lg md:text-xl mb-8 max-w-3xl mx-auto font-sans leading-relaxed">
-            Where academic excellence meets professional standards. We deliver high-quality writing services 
-            with meticulous attention to detail and scholarly precision for your success.
+            From research papers to Scopus publications, we provide expert writing services across Law, Management, 
+            Computer Science, Sciences, and more. Quality guaranteed, deadlines met, success delivered.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">

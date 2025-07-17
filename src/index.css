@@ -44,14 +44,14 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 font-serif;
+    @apply bg-slate-50 text-slate-900 font-sans;
     background-image: 
-      linear-gradient(90deg, #f1f5f9 1px, transparent 1px),
-      linear-gradient(#f1f5f9 1px, transparent 1px),
-      radial-gradient(circle at 20px 80px, #e2e8f0 1px, transparent 1px),
-      radial-gradient(circle at 80px 20px, #cbd5e1 1px, transparent 1px);
-    background-size: 100px 100px, 100px 25px, 150px 150px, 200px 200px;
-    animation: float 20s ease-in-out infinite, notebook-move 30s linear infinite;
+      linear-gradient(90deg, #f8fafc 1px, transparent 1px),
+      linear-gradient(#f8fafc 1px, transparent 1px),
+      radial-gradient(circle at 20px 80px, #f1f5f9 1px, transparent 1px),
+      radial-gradient(circle at 80px 20px, #e2e8f0 1px, transparent 1px);
+    background-size: 120px 120px, 120px 30px, 180px 180px, 240px 240px;
+    animation: float 25s ease-in-out infinite, notebook-move 35s linear infinite;
   }
   
   h1, h2, h3, h4, h5, h6 {
