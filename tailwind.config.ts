@@ -63,10 +63,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'serif-bold': ['Source Serif Pro', 'serif'],
-				'sans': ['Inter', 'sans-serif'],
-				'academic': ['Crimson Text', 'serif'],
+				sans: ["Inter", "system-ui", "sans-serif"],
+				display: ["Poppins", "system-ui", "sans-serif"],
 			},
 			keyframes: {
 				'accordion-down': {

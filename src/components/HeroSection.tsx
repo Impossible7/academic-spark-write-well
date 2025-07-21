@@ -1,120 +1,118 @@
-
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { FileText, PenTool, BookOpen, Feather, Palette, Edit3 } from "lucide-react";
+import { GraduationCap, FileText, BookOpen, Users, Award, CheckCircle, Phone, Mail } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      {/* Floating professional elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="floating-element absolute top-20 left-10 opacity-20">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-full p-4 shadow-lg">
-            <PenTool className="h-12 w-12 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute top-40 right-20 opacity-15">
-          <div className="bg-gradient-to-r from-slate-600 to-slate-700 rounded-full p-4 shadow-lg">
-            <BookOpen className="h-16 w-16 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute bottom-32 left-1/4 opacity-20">
-          <div className="bg-gradient-to-r from-blue-700 to-slate-700 rounded-full p-4 shadow-lg">
-            <Edit3 className="h-10 w-10 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute top-1/2 right-10 opacity-10">
-          <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-full p-6 shadow-lg">
-            <Feather className="h-20 w-20 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute bottom-40 right-1/3 opacity-15">
-          <div className="bg-gradient-to-r from-slate-500 to-slate-600 rounded-full p-3 shadow-lg">
-            <Palette className="h-8 w-8 text-white" />
-          </div>
-        </div>
-      </div>
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 py-20 lg:py-32">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-4xl lg:text-6xl font-display font-bold text-gray-900 leading-tight">
+                Academic Writing & <span className="text-blue-600">Publication</span> Services
+              </h1>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We offer a comprehensive range of academic services tailored to meet your specific needs from assignments to PhD thesis.
+              </p>
+              <p className="text-base text-gray-700 font-semibold">
+                Writosphere - We Contribute To Ensuring Error-Free, High-Quality Content For Your Academic Excellence!
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3">
+                Select Package
+              </Button>
+              <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3">
+                Customize Package
+              </Button>
+            </div>
 
-      {/* Subtle paper texture overlay */}
-      <div className="absolute inset-0 paper-texture opacity-30"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 handwriting-animation">
-              <span className="text-white font-bold handwriting-effect">
-                Professional Academic Writing Services
-              </span>
-              <br />
-              <span className="text-slate-100 font-serif text-2xl md:text-3xl">
-                Excellence Across All Academic Disciplines
-              </span>
-            </h1>
-          </div>
-          
-          <p className="text-white/90 text-lg md:text-xl mb-8 max-w-3xl mx-auto font-sans leading-relaxed">
-            From research papers to Scopus publications, we provide expert writing services across Law, Management, 
-            Computer Science, Sciences, and more. Quality guaranteed, deadlines met, success delivered.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
-            <Button className="btn-accent text-lg px-8 py-4 relative group font-sans font-semibold">
-              <PenTool className="h-5 w-5 mr-2 group-hover:animate-pulse" />
-              Start Your Project
-            </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 font-sans font-semibold rounded-lg">
-              <BookOpen className="h-5 w-5 mr-2" />
-              Explore Our Services
-            </Button>
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <span>+91 91507 70317 / +91 93455 34648</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <span>support@writosphere.com</span>
+              </div>
+            </div>
           </div>
 
-          {/* Professional stats with refined styling */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce">
-                <FileText className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-3xl font-serif-bold text-white mb-1">5,000+</div>
-              <div className="text-white/80 text-sm font-sans">Papers Delivered</div>
+          {/* Right Side - Contact Form */}
+          <div className="relative">
+            <div className="bg-blue-600 rounded-2xl p-8 text-white shadow-xl">
+              <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>
+              <form className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="eg: +1"
+                    className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Phone no."
+                    className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  />
+                </div>
+                <select className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                  <option>-- Select Country --</option>
+                  <option>India</option>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Australia</option>
+                </select>
+                <select className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                  <option>-- Service Required --</option>
+                  <option>Assignment Writing</option>
+                  <option>Thesis Writing</option>
+                  <option>Research Paper</option>
+                  <option>Publication Support</option>
+                  <option>Editing & Proofreading</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Social Media Profile URL (Facebook, Instagram, Twitter, LinkedIn (Any one))"
+                  className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
-            <div className="text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-r from-slate-600 to-slate-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce" style={{animationDelay: '1s'}}>
-                <PenTool className="h-8 w-8 text-white" />
+            
+            {/* Decorative paper with pen image */}
+            <div className="absolute -bottom-8 -left-8 w-48 h-32 bg-white rounded-lg shadow-lg transform rotate-3 opacity-90">
+              <div className="p-4">
+                <div className="w-full h-2 bg-gray-200 rounded mb-2"></div>
+                <div className="w-3/4 h-2 bg-gray-200 rounded mb-2"></div>
+                <div className="w-full h-2 bg-gray-200 rounded mb-2"></div>
+                <div className="w-1/2 h-2 bg-gray-200 rounded"></div>
               </div>
-              <div className="text-3xl font-serif-bold text-white mb-1">250+</div>
-              <div className="text-white/80 text-sm font-sans">Expert Writers</div>
-            </div>
-            <div className="text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-xl p-4 w-20 h-20 mx-auto mb-3 flex items-center justify-center shadow-lg animate-gentle-bounce" style={{animationDelay: '2s'}}>
-                <BookOpen className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-3xl font-serif-bold text-white mb-1">10+</div>
-              <div className="text-white/80 text-sm font-sans">Years Excellence</div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Professional wave SVG */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden transform translate-y-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#f8fafc" />
-              <stop offset="25%" stopColor="#f1f5f9" />
-              <stop offset="50%" stopColor="#e2e8f0" />
-              <stop offset="75%" stopColor="#cbd5e1" />
-              <stop offset="100%" stopColor="#94a3b8" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#waveGradient)"
-            fillOpacity="1"
-            d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,112C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-    </div>
+    </section>
   );
 };
 
