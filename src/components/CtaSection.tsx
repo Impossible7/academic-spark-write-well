@@ -68,7 +68,7 @@ ${formData.description}
 
   return (
     <div className="py-16 md:py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+      {/* <div className="container mx-auto px-4 relative z-10">
         <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center text-white border-2 border-white/30 shadow-2xl notebook-paper">
           <div className="flex justify-center mb-6">
             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full p-6 shadow-xl animate-colorful-bounce">
@@ -109,7 +109,7 @@ ${formData.description}
                   <p className="text-purple-600 text-center font-notebook">
                     Share your colorful vision and let's paint something extraordinary! 🌈
                   </p>
-                </DialogHeader>
+                </DialogHeader> */}
                 
                 <form onSubmit={handleSubmit} className="space-y-6 mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
