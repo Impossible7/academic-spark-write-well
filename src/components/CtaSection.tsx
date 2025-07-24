@@ -68,30 +68,6 @@ ${formData.description}
 
   return (
     <div className="py-16 md:py-24 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 relative overflow-hidden">
-      {/* Colorful background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="floating-element absolute top-10 left-10">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full p-4">
-            <PenTool className="h-16 w-16 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute bottom-10 right-10">
-          <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full p-5">
-            <MessageCircle className="h-20 w-20 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute top-1/2 left-1/4">
-          <div className="bg-gradient-to-r from-pink-400 to-purple-500 rounded-full p-3">
-            <Heart className="h-12 w-12 text-white" />
-          </div>
-        </div>
-        <div className="floating-element absolute bottom-1/3 right-1/4">
-          <div className="bg-gradient-to-r from-blue-400 to-green-500 rounded-full p-4">
-            <Star className="h-14 w-14 text-white" />
-          </div>
-        </div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center text-white border-2 border-white/30 shadow-2xl notebook-paper">
           <div className="flex justify-center mb-6">
