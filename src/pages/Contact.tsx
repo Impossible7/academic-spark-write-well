@@ -71,21 +71,10 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                      <p className="text-text-dark/70">+1 (555) 123-4567</p>
-                      <p className="text-text-dark/70">+1 (555) 987-6543</p>
+                      <p className="text-text-dark/70">+91 7903210106</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
-                      <p className="text-text-dark/70">123 Academic Street</p>
-                      <p className="text-text-dark/70">Education City, EC 12345</p>
-                    </div>
-                  </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="h-12 w-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -93,9 +82,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Business Hours</h3>
-                      <p className="text-text-dark/70">Monday - Friday: 9:00 AM - 8:00 PM</p>
-                      <p className="text-text-dark/70">Saturday: 10:00 AM - 6:00 PM</p>
-                      <p className="text-text-dark/70">Sunday: Closed</p>
+                      <p className="text-text-dark/70">24/7 Available</p>
                     </div>
                   </div>
                 </div>

@@ -86,12 +86,6 @@ const Header = () => {
           </div>
           
           <Link 
-            to="/samples" 
-            className={`transition-colors ${isActive('/samples') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
-          >
-            Samples
-          </Link>
-          <Link 
             to="/faq" 
             className={`transition-colors ${isActive('/faq') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}
           >
@@ -150,7 +144,7 @@ const Header = () => {
             )}
           </div>
           
-          <Link to="/samples" className={`block py-2 ${isActive('/samples') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Samples</Link>
+          
           <Link to="/faq" className={`block py-2 ${isActive('/faq') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>FAQs</Link>
           <Link to="/blog" className={`block py-2 ${isActive('/blog') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Blog</Link>
           <Link to="/contact" className={`block py-2 ${isActive('/contact') ? 'text-primary font-medium' : 'text-text-dark hover:text-primary'}`}>Contact</Link>

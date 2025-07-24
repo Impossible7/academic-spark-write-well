@@ -173,7 +173,7 @@ const FAQ = () => {
                     Contact Support
                   </a>
                   <a 
-                    href="https://wa.me/1234567890" 
+                    href="https://wa.me/917903210106" 
                     className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
                   >
                     Chat on WhatsApp

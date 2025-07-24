@@ -46,7 +46,7 @@ ${formData.description}
 ✍️ Sent from Academic Spark Website`;
     
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodedMessage}`; // Replace with your WhatsApp number
+    const whatsappUrl = `https://wa.me/917903210106?text=${encodedMessage}`; // Replace with your WhatsApp number
     
     // Show success message
     toast.success("🎉 Redirecting to WhatsApp magic...");

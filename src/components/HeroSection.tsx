@@ -32,7 +32,7 @@ Country: ${formData.country}
 Service Required: ${formData.service}
 Social Media: ${formData.socialMedia}`;
     
-    const whatsappUrl = `https://wa.me/919150770317?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/917903210106?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
     // Reset form
@@ -99,8 +99,8 @@ Social Media: ${formData.socialMedia}`;
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3 hover-scale">
-                <Link to="/samples">
-                  View Samples
+                <Link to="/contact">
+                  Contact Us
                 </Link>
               </Button>
             </div>
@@ -109,7 +109,7 @@ Social Media: ${formData.socialMedia}`;
             <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+91 91507 70317 / +91 93455 34648</span>
+                <span>+91 7903210106</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />

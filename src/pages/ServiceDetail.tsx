@@ -156,8 +156,8 @@ const ServiceDetail = () => {
                   <a href="#contact" className="bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-md transition-colors">
                     Get a Quote
                   </a>
-                  <a href="#samples" className="bg-transparent border border-white hover:bg-white/10 text-white px-6 py-3 rounded-md transition-colors">
-                    View Samples
+                  <a href="/contact" className="bg-transparent border border-white hover:bg-white/10 text-white px-6 py-3 rounded-md transition-colors">
+                    Contact Us
                   </a>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const ServiceDetail = () => {
               </ul>
               
               <h3 className="text-2xl font-semibold mb-4 text-primary">
-                {service.sampleTopics ? 'Sample Topics' : 'Sample Areas'}
+                Key Areas We Cover
               </h3>
               <ul className="list-disc pl-6 space-y-2">
                 {(service.sampleTopics || service.sampleAreas).map((topic: string, index: number) => (
