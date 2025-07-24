@@ -108,6 +108,16 @@
   50% { box-shadow: 0 0 30px rgba(30, 64, 175, 0.2); }
 }
 
+@keyframes animate-float {
+  0%, 100% { transform: translateY(0px) rotate(3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 @layer components {
   .handwriting-animation {
     position: relative;
@@ -265,5 +275,17 @@
 
   .professional-gradient {
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  }
+
+  .animate-float {
+    animation: animate-float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }

@@ -51,7 +51,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-primary font-poppins font-bold text-2xl">Academic<span className="text-secondary">Spark</span></span>
+          <span className="text-primary font-poppins font-bold text-2xl">Write<span className="text-secondary">sphere</span></span>
         </Link>
 
         {/* Desktop Navigation */}
