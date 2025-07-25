@@ -16,7 +16,7 @@ const About = () => {
       <main className="flex-grow pt-20">
         <AboutHero />
         <AboutSection />
-        <TeamSection />
+        
         <ProcessSection />
         <TestimonialsSection />
         <CtaSection />
